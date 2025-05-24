@@ -1,0 +1,118 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Base styles */
+:root {
+  --tech-teal: #21808C;
+  --tech-bright-teal: #18A7B4;
+  --tech-peach: #FAC48B;
+  --tech-orange: #FC8433;
+  --tech-burnt-orange: #D45D07;
+}
+
+@layer base {
+  .dark {
+    --background: 215 25% 9%;
+    --foreground: 216 10% 90%;
+    --card: 215 25% 12%;
+    --card-foreground: 216 10% 90%;
+    --popover: 215 25% 12%;
+    --popover-foreground: 216 10% 90%;
+    --primary: 195 69% 40%;
+    --primary-foreground: 216 10% 90%;
+    --secondary: 215 35% 20%;
+    --secondary-foreground: 216 10% 90%;
+    --muted: 215 35% 22%;
+    --muted-foreground: 216 10% 65%;
+    --accent: 195 69% 40%;
+    --accent-foreground: 216 10% 90%;
+    --destructive: 358 75% 59%;
+    --destructive-foreground: 216 10% 90%;
+    --border: 215 35% 25%;
+    --input: 215 35% 25%;
+    --ring: 195 69% 40%;
+    --dark-card: 215 25% 13%;
+    --dark-text: 216 10% 90%; 
+    --dark-border: 215 35% 25%;
+  }
+}
+
+@layer components {
+  .bg-gradient-faith {
+    @apply bg-gradient-to-r from-green-500 to-green-600;
+  }
+  
+  .bg-gradient-cta {
+    @apply bg-gradient-to-r from-green-500 to-green-600;
+  }
+
+  .bg-gradient-tech {
+    @apply bg-gradient-to-r from-green-500 via-green-600 to-green-500;
+  }
+
+  .testimonal-card {
+    @apply bg-white rounded-lg shadow-md transition-all duration-300;
+  }
+
+  .feature-card {
+    @apply transition-all duration-300;
+  }
+  
+  .word-tile {
+    @apply w-14 h-14 flex items-center justify-center text-xl font-bold rounded transition-all duration-300 md:w-16 md:h-16 px-4;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+@keyframes reveal {
+  0% { transform: rotateX(0); }
+  50% { transform: rotateX(90deg); }
+  100% { transform: rotateX(0); }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  40% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+.animate-reveal {
+  animation: reveal 0.5s ease-in-out forwards;
+}
+
+.animate-pop {
+  animation: pop 0.2s ease-in-out forwards;
+}
+
+.animate-shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}

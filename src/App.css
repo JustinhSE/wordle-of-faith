@@ -1,0 +1,187 @@
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(24, 167, 180, 0.6));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(33, 128, 140, 0.6));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background: linear-gradient(135deg, rgba(33, 128, 140, 0.05) 0%, rgba(24, 167, 180, 0.1) 100%);
+  border: 1px solid rgba(33, 128, 140, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(24, 167, 180, 0.1);
+}
+
+.dark .card {
+  background: linear-gradient(135deg, rgba(33, 128, 140, 0.1) 0%, rgba(24, 167, 180, 0.15) 100%);
+  border: 1px solid rgba(33, 128, 140, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.read-the-docs {
+  color: #21808C;
+}
+
+.dark .read-the-docs {
+  color: #18A7B4;
+}
+
+.tech-card {
+  background: linear-gradient(135deg, rgba(24, 167, 180, 0.03) 0%, rgba(33, 128, 140, 0.08) 100%);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border: 1px solid rgba(33, 128, 140, 0.2);
+  box-shadow: 
+    0 4px 12px rgba(24, 167, 180, 0.08),
+    0 1px 3px rgba(33, 128, 140, 0.12);
+  transition: all 0.3s ease;
+}
+
+.dark .tech-card {
+  background: linear-gradient(135deg, rgba(24, 167, 180, 0.06) 0%, rgba(33, 128, 140, 0.12) 100%);
+  border: 1px solid rgba(33, 128, 140, 0.3);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.tech-card:hover {
+  box-shadow: 
+    0 8px 24px rgba(24, 167, 180, 0.12),
+    0 2px 6px rgba(33, 128, 140, 0.18);
+  border-color: rgba(33, 128, 140, 0.4);
+  transform: translateY(-2px);
+}
+
+.tech-button {
+  background: linear-gradient(135deg, #21808C 0%, #18A7B4 100%);
+  color: white;
+  border-radius: 6px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(33, 128, 140, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tech-button:hover {
+  background: linear-gradient(135deg, #18A7B4 0%, #21808C 100%);
+  box-shadow: 0 6px 12px rgba(33, 128, 140, 0.3);
+  transform: translateY(-2px);
+}
+
+.tech-button-secondary {
+  background: linear-gradient(135deg, #FC8433 0%, #D45D07 100%);
+  color: white;
+  border-radius: 6px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(252, 132, 51, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tech-button-secondary:hover {
+  background: linear-gradient(135deg, #D45D07 0%, #FC8433 100%);
+  box-shadow: 0 6px 12px rgba(252, 132, 51, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Game tile effects */
+.game-tile {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-tile:hover::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(30deg);
+  }
+}
+
+/* Feature card hover effect */
+.feature-card {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Dark mode styles */
+.dark {
+  --background-color: #121212;
+  --text-color: #E0E0E0;
+  --muted-color: #888888;
+  --border-color: #2A2A2A;
+  --card-bg: #1E1E1E;
+}
+
+.dark body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Testimonial card styles */
+.testimonial-card {
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(24, 167, 180, 0.05) 0%, rgba(33, 128, 140, 0.1) 100%);
+  transition: all 0.3s ease;
+}
+
+.dark .testimonial-card {
+  background: linear-gradient(135deg, rgba(33, 128, 140, 0.1) 0%, rgba(24, 167, 180, 0.15) 100%);
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(33, 128, 140, 0.1);
+}
