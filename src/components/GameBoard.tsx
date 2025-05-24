@@ -234,7 +234,7 @@ const GameBoard: React.FC<GameBoardProps> = ({ onGameEnd, isLoggedIn }) => {
     }
     
     // Add app URL
-    resultGrid += '\nhttps://biblewordle.com';
+    resultGrid += '\nhttps://christian-wordle.vercel.app/';
     
     // Copy to clipboard
     navigator.clipboard.writeText(resultGrid).then(() => {
